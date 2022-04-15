@@ -3,6 +3,7 @@ function Personal() {
       <>
         <span class="beeg">NICHOLAS<b>FASON</b></span><br />
         <span class="smol">Backend Developer // I suck at UI</span>
+
         <a href="/biz">Biz mode on</a>
         <h3>You got something to say to me?</h3>
         <ul>
@@ -11,7 +12,7 @@ function Personal() {
           <li>If you need me more urgently than an email then you should already have my phone number.</li>
         </ul>
 
-        <h3>Some facts</h3>
+        <h3>Some quick facts</h3>
         <ol>
           <li>I'm a Computer Science student studying at the University of Alabama at Birmingham. Go Blazers!</li>
           <li>I'm from the south.</li>

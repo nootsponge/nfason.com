@@ -34,3 +34,11 @@ ol {
   margin-bottom: 3em;
   display: inherit;
 }
+
+td {
+  width: 25%;
+}
+
+.end {
+  margin-bottom: 2em;
+}
