@@ -2,9 +2,18 @@ body {
   display: block;
 }
 
-#root {
-  margin: auto;
-  width: 50%;
+@media only screen and (max-width: 768px) {
+  #root {
+    margin: auto;
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #root {
+    margin: auto;
+    width: 50%;
+  }
 }
 
 ul, ol {
