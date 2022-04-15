@@ -7,6 +7,7 @@ import {
 
 import Personal from "./Personal";
 import Biz from "./Biz"
+import NotFound from './NotFound';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/biz" element={<Biz />} />
           <Route path="/" element={<Personal />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>
