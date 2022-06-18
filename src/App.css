@@ -55,3 +55,8 @@ td {
 .end {
   margin-bottom: 2em;
 }
+
+.far-right {
+  float: right;
+  margin: -1em;
+}
