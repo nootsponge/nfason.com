@@ -24,9 +24,9 @@ function Personal() {
 
         <h3>Hobbies include...</h3>
         <ul>
-          <li>Producing short films</li>
-          <li>Video games</li>
-          <li>Live event production (A/V, livestreaming, etc.)</li>
+          <li><a href="/films">Producing short films</a></li>
+          <li><a href="/games">Sucking at video games</a></li>
+          <li>Live event production (audio engineering, lighting design, livestreaming, etc.)</li>
         </ul>
       </>
     )
