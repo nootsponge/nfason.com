@@ -48,7 +48,7 @@ function Biz() {
           <tr>
             <td>EdgeGamers - Remote</td>
             <td>Community Manager - Technical Team</td>
-            <td>Sep 2021 - present</td>
+            <td>Sep 2021 - Jun 2022</td>
           </tr>
         </table>
 
