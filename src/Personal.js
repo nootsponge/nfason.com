@@ -1,8 +1,9 @@
+import Header from "./Components/Header";
+
 function Personal() {
     return (
       <>
-        <span class="beeg">NICHOLAS<b>FASON</b></span><br />
-        <span class="smol">Backend Developer // I suck at UI</span>
+        <Header />
 
         <a href="/biz">Biz mode on</a>
         <h3>You got something to say to me?</h3>

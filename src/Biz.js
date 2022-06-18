@@ -1,8 +1,10 @@
+import Header from "./Components/Header";
+import Experience from "./Components/Experience";
+
 function Biz() {
     return(
       <>
-        <span class="beeg">NICHOLAS<b>FASON</b></span><br />
-        <span class="smol">Backend Developer // I suck at UI</span>
+        <Header />
         
         <a href="/">Biz mode off</a>
         <p>Hello, I'm Nicholas Fason, a Computer Science student from Alabama, U.S. I'm attending the <a href="https://uab.edu" target="_blank" rel="noreferrer">University of Alabama at Birmingham</a> in hopes of earning a Bachelors of Science in Computer Science by 2025.</p>
@@ -55,16 +57,7 @@ function Biz() {
           <li>See my contributions on <a href="https://gitlab.com/NootSponge" target="_blank" rel="noreferrer">Gitlab</a></li>
         </ul>
 
-        <h3>SKILLS / TECHNOLOGIES / LANGUAGES</h3>
-        <ul class="end">
-          <li>JavaScript - 1 year experience - 7/10</li>
-          <li>C# / .NET - 2 years experience - 8/10</li>
-          <li>PHP - 3 years experience - 9.5/10</li>
-          <li>SQL / Databases - 3 years experience - 9/10</li>
-          <li>Docker - 1 year experience - 9/10</li>
-          <li>Kubernetes / Helm - 1 year experience - 7/10</li>
-          <li>Linux - 3 years experience - 8/10</li>
-        </ul>
+        <Experience />
       </>
     )
 }
