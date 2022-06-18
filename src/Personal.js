@@ -5,10 +5,11 @@ function Personal() {
       <>
         <Header />
 
+        <p>Tip: Use this link to view a professional version of this page.</p>
         <a href="/biz">Biz mode on</a>
         <h3>You got something to say to me?</h3>
         <ul>
-          <li>Personal/Business Inquiries: <a href="mailto:nicholasfason@gmail.com">nicholasfason@gmail.com</a></li>
+          <li>Personal/Business Inquiries: <a href="mailto:contact@nfason.com">contact@nfason.com</a></li>
           <li>Educational Inquiries: <a href="mailto:nfason@uab.edu">nfason@uab.edu</a></li>
           <li>If you need me more urgently than an email then you should already have my phone number.</li>
         </ul>

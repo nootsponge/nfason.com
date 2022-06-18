@@ -2,10 +2,11 @@ import Header from "./Components/Header";
 import Experience from "./Components/Experience";
 
 function Biz() {
-    return(
+    return (
       <>
         <Header />
         
+        <p>Tip: Use this link to view a <i>less</i>-professional version of this page.</p>
         <a href="/">Biz mode off</a>
         <p>Hello, I'm Nicholas Fason, a Computer Science student from Alabama, U.S. I'm attending the <a href="https://uab.edu" target="_blank" rel="noreferrer">University of Alabama at Birmingham</a> in hopes of earning a Bachelors of Science in Computer Science by 2025.</p>
         <p>As you can tell from the way this website looks, I'm not incredibly experienced at UI design, but as a software engineer I really do enjoy backend development of systems.</p>
@@ -13,7 +14,7 @@ function Biz() {
 
         <h3>CONTACT INFORMATION</h3>
         <ul>
-          <li>Personal/Business Inquiries: <a href="mailto:nicholasfason@gmail.com">nicholasfason@gmail.com</a></li>
+          <li>Personal/Business Inquiries: <a href="mailto:contact@nfason.com">contact@nfason.com</a></li>
           <li>Educational Inquiries: <a href="mailto:nfason@uab.edu">nfason@uab.edu</a></li>
         </ul>
 
@@ -54,7 +55,7 @@ function Biz() {
         <h3>PORTFOLIO</h3>
         <ul>
           <li>See my contributions on <a href="https://github.com/NootSponge" target="_blank" rel="noreferrer">GitHub</a></li>
-          <li>See my contributions on <a href="https://gitlab.com/NootSponge" target="_blank" rel="noreferrer">Gitlab</a></li>
+          <li>See my contributions on <a href="https://gitlab.com/NootSponge" target="_blank" rel="noreferrer">GitLab</a></li>
         </ul>
 
         <Experience />
