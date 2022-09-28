@@ -46,7 +46,7 @@ function Biz() {
           <td>St. Clair County High School</td>
           <td>2018 - 2021</td>
           <td>
-            Advanced Acedemic Diploma <br /> GPA &gt; 4.0
+            Advanced Academic Diploma <br /> GPA &gt; 4.0
           </td>
         </tr>
         <tr>
