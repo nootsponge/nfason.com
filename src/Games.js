@@ -18,6 +18,7 @@ function Games() {
                 <li><a href="https://store.steampowered.com/app/620" target="_blank" rel="noreferrer">Portal 2</a>, Valve (2011)</li>
                 <li><a href="https://store.steampowered.com/app/480490" target="_blank" rel="noreferrer">Prey</a>, Bethesda Softworks (2017)</li>
                 <li><a href="https://store.steampowered.com/app/211820" target="_blank" rel="noreferrer">Starbound</a>, Chucklefish (2016)</li>
+                <li><a href="https://store.steampowered.com/app/740250" target="_blank" rel="noreferrer">Neos VR</a>, Frooxious (2018)</li>
             </ul>
 
             <p>I'm not that good at video games but if you can't tell I'm a big enjoyer of games with rich stories and games that involve space. If a game has both of those elements (Prey, Event[0], etc.) then it's definitely something I'll like.</p>

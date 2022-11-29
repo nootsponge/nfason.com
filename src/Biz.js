@@ -52,7 +52,7 @@ function Biz() {
         <tr>
           <td>University of Alabama at Birmingham</td>
           <td>2021 - present</td>
-          <td>B.S. Computer Science*</td>
+          <td>B.A. Computer Science, Minor in Communication Management*</td>
         </tr>
       </table>
       <span>*in progress</span>

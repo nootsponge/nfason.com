@@ -30,7 +30,7 @@ function Personal() {
         <li>I pronounce "pecan" like puh-kahn, not pee-can.</li>
         <li>I'm a Christian.</li>
         <li>
-          <a href="/music">Music moves me through life.</a>
+          <a href="/music">I love music.</a>
         </li>
       </ol>
 
