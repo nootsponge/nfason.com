@@ -13,11 +13,11 @@ function App() {
     <Router>
       <div className="app">
         <Routes>
-          <Route path="/biz" element={<Biz />} />
+          <Route path="/personal" element={<Personal />} />
           <Route path="/films" element={<Films />} />
           <Route path="/games" element={<Games />} />
           <Route path="/music" element={<Music />} />
-          <Route path="/" element={<Personal />} />
+          <Route path="/" element={<Biz />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

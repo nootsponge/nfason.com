@@ -6,9 +6,8 @@ function Biz() {
     <>
       <Header />
 
-      <p>
-        Tip: Use this link to view a <i>less</i>-professional version of this
-        page.
+      <p style={{ marginBottom: "0" }}>
+        To view a more personal version of this page, click the link below.{" "}
       </p>
       <a href="/">Biz mode off</a>
       <p>
