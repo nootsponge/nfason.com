@@ -16,6 +16,8 @@ jobs:
           npm run build
       - name: Tar build artifacts
         run: tar -zcvf dist.tar.gz dist
+      - name: Display structure of downloaded files
+        run: ls -R
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -32,6 +34,8 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build
+      - name: Display structure of downloaded files
+        run: ls -R
       - name: Extract build artifacts
         run: tar -zxvf build/dist.tar.gz
       - name: Display structure of downloaded files
