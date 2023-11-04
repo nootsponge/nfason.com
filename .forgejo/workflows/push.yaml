@@ -29,7 +29,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: dist
-      - run: ls -lah dist/
+      - run: ls -lah
       - name: Deploy to Cloudflare Pages
         uses: https://github.com/cloudflare/wrangler-action@v3
         with:
