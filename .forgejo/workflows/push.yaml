@@ -10,26 +10,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 19
-      - name: Get npm cache directory
-        id: npm-cache-dir
-        shell: bash
-        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
-      - uses: actions/cache@v3
-        id: npm-cache
-        with:
-          path: ${{ steps.npm-cache-dir.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
       - name: Install dependencies and build
         run: |
           npm install
           npm run build
+      - name: Tar build artifacts
+        run: tar -zcvf dist.tar.gz dist
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: dist
-          path: dist
+          name: build
+          path: dist.tar.gz
 
   deploy:
     needs: build
@@ -40,7 +31,10 @@ jobs:
       - name: Download build artifacts
         uses: actions/download-artifact@v3
         with:
-          name: dist
+          name: build
+          path: dist.tar.gz
+      - name: Extract build artifacts
+        run: tar -zxvf dist.tar.gz
       - name: Display structure of downloaded files
         run: ls -R
         working-directory: dist
