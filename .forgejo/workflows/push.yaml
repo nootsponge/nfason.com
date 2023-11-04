@@ -17,8 +17,7 @@ jobs:
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: build
-          path: dist/
+          name: dist
   deploy:
     needs: build
     runs-on: docker
@@ -28,8 +27,7 @@ jobs:
       - name: Download build artifacts
         uses: actions/download-artifact@v3
         with:
-          name: build
-          path: dist
+          name: dist
       - run: ls -lah dist/
       - name: Deploy to Cloudflare Pages
         uses: https://github.com/cloudflare/wrangler-action@v3
