@@ -32,11 +32,10 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: site-build
-          path: dist.tar.gz
       - name: Display structure of downloaded files
         run: ls -R
       - name: Untar build artifacts
-        run: tar -xzvf dist.tar.gz
+        run: tar -xzvf site-build/dist.tar.gz
       - name: Display structure of unzipped files
         run: ls -R
       # - name: Deploy to Cloudflare Pages
