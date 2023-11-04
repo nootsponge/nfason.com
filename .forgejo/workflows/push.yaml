@@ -32,10 +32,10 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build
+      - name: Extract build artifacts
+        run: tar -zxvf build/dist.tar.gz
       - name: Display structure of downloaded files
         run: ls -R
-      - name: Extract build artifacts
-        run: tar -zxvf dist.tar.gz
       - name: Deploy to Cloudflare Pages
         uses: https://github.com/cloudflare/wrangler-action@v3
         with:
