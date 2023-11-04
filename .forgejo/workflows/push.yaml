@@ -32,7 +32,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build
-          path: dist.tar.gz
       - name: Extract build artifacts
         run: tar -zxvf dist.tar.gz
       - name: Display structure of downloaded files
