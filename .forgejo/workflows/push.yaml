@@ -10,19 +10,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 19
-      - name: Install dependencies and build
-        run: |
-          npm install
-          npm run build
-      - name: Tar build artifacts
-        run: tar -zcvf dist.tar.gz dist
-      - name: Display structure of downloaded files
-        run: ls -R
+      - name: Install dependencies
+        run: npm install
+      - name: Build site
+        run: npm run build
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: build
-          path: dist.tar.gz
+          path: dist/
 
   deploy:
     needs: build
@@ -36,13 +32,9 @@ jobs:
           name: build
       - name: Display structure of downloaded files
         run: ls -R
-      - name: Extract build artifacts
-        run: tar -zxvf build/dist.tar.gz
-      - name: Display structure of downloaded files
-        run: ls -R
-      - name: Deploy to Cloudflare Pages
-        uses: https://github.com/cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist/ --project-name nfason-com --branch ${{ github.ref_name }} --commit-hash ${{ github.sha }} --commit-dirty=true
+      # - name: Deploy to Cloudflare Pages
+      #   uses: https://github.com/cloudflare/wrangler-action@v3
+      #   with:
+      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      #     command: pages deploy dist/ --project-name nfason-com --branch ${{ github.ref_name }} --commit-hash ${{ github.sha }} --commit-dirty=true
