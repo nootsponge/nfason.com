@@ -14,7 +14,6 @@ jobs:
         run: |
           npm install
           npm run build
-      - run: ls -lah dist/
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -31,9 +30,10 @@ jobs:
         with:
           name: build
           path: dist
+      - run: ls -lah dist/
       - name: Deploy to Cloudflare Pages
         uses: https://github.com/cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name nfason-com --branch ${{ github.ref_name }} --commit-hash ${{ github.sha }}
+          command: pages deploy dist/ --project-name nfason-com --branch ${{ github.ref_name }} --commit-hash ${{ github.sha }} --commit-dirty=true
