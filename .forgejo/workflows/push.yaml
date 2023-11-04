@@ -13,6 +13,7 @@ jobs:
         run: |
           npm install
           npm run build
+      - run: ls -lah
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
