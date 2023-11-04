@@ -29,9 +29,9 @@ jobs:
         with:
           name: build
       - run: echo ${{ forgejo.ref_name }} ${{ forgejo.sha }}
-      - name: Deploy to Cloudflare Pages
-        uses: https://github.com/cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name nfason-com --branch ${{ forgejo.ref_name }} --commit-hash ${{ forgejo.sha }}
+      # - name: Deploy to Cloudflare Pages
+      #   uses: https://github.com/cloudflare/wrangler-action@v3
+      #   with:
+      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      #     command: pages deploy dist --project-name nfason-com --branch ${{ forgejo.ref_name }} --commit-hash ${{ forgejo.sha }}
