@@ -28,6 +28,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build
+      - run: echo ${{ forgejo.ref_name }} ${{ forgejo.sha }}
       - name: Deploy to Cloudflare Pages
         uses: https://github.com/cloudflare/wrangler-action@v3
         with:
