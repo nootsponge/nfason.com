@@ -32,15 +32,11 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: site-build
-      - name: Display structure of downloaded files
-        run: ls -R
       - name: Untar build artifacts
         run: tar -xvf site-build/dist.tar.gz
-      - name: Display structure of unzipped files
-        run: ls -R
-      # - name: Deploy to Cloudflare Pages
-      #   uses: https://github.com/cloudflare/wrangler-action@v3
-      #   with:
-      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      #     command: pages deploy dist/ --project-name nfason-com --branch ${{ github.ref_name }} --commit-hash ${{ github.sha }} --commit-dirty=true
+      - name: Deploy to Cloudflare Pages
+        uses: https://github.com/cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name nfason-com --branch ${{ github.ref_name }} --commit-hash ${{ github.sha }} --commit-dirty=true
