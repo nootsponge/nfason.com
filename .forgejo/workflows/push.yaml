@@ -14,13 +14,13 @@ jobs:
         run: npm install
       - name: Build site
         run: npm run build
-      - name: Zip build artifacts
-        run: zip -r dist.zip dist
+      - name: Tar build artifacts
+        run: tar -czvf dist.tar.gz dist
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: site-build
-          path: dist.zip
+          path: dist.tar.gz
 
   deploy:
     needs: build
@@ -34,8 +34,8 @@ jobs:
           name: site-build
       - name: Display structure of downloaded files
         run: ls -R
-      - name: Unzip build artifacts
-        run: unzip -o dist.zip
+      - name: Untar build artifacts
+        run: tar -xzvf dist.tar.gz
       - name: Display structure of unzipped files
         run: ls -R
       # - name: Deploy to Cloudflare Pages
